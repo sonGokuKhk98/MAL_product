@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mal Unified Payments Demo</title>
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --card: #fffdf8;
+      --ink: #1b2430;
+      --muted: #5b6574;
+      --accent: #0f766e;
+      --line: #d7d2c8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(15,118,110,.10), transparent 28%),
+        linear-gradient(180deg, #f9f5ef 0%, var(--bg) 100%);
+      color: var(--ink);
+      font: 16px/1.5 Georgia, "Times New Roman", serif;
+    }
+    main { max-width: 1080px; margin: 0 auto; padding: 48px 20px 64px; }
+    h1, h2 { font-family: Helvetica, Arial, sans-serif; letter-spacing: -.02em; }
+    h1 { font-size: 40px; line-height: 1.05; margin: 0 0 8px; }
+    p { color: var(--muted); max-width: 760px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 28px 0 36px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(27,36,48,.05);
+    }
+    .metric {
+      font: 600 34px/1 Helvetica, Arial, sans-serif;
+      margin: 4px 0;
+    }
+    .label {
+      color: var(--muted);
+      font: 600 12px/1.2 Helvetica, Arial, sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    section { margin-top: 28px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #ebe5da;
+      text-align: left;
+      font-size: 14px;
+    }
+    th {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #faf7f1;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    @media (max-width: 800px) {
+      .two-col { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Unified Payment Data Pipeline</h1>
+    <p>Static demo for the Mal assessment. This page is generated from the pipeline outputs and is suitable for GitHub Pages as the optional deployed demo.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="label">Valid Records</div>
+        <div class="metric">9</div>
+      </div>
+      <div class="card">
+        <div class="label">Invalid Records</div>
+        <div class="metric">3</div>
+      </div>
+      <div class="card">
+        <div class="label">Compliance Rate</div>
+        <div class="metric">75.0%</div>
+      </div>
+      <div class="card">
+        <div class="label">Freshness Lag</div>
+        <div class="metric">53.27h</div>
+      </div>
+    </div>
+
+    <section class="two-col">
+      <div>
+        <h2>Volume by Payment Type</h2>
+        <table><thead><tr><th>Payment Type</th><th>Txn Count</th><th>Total Amount</th></tr></thead><tbody><tr><td>bill_payment</td><td>3</td><td>1525.24</td></tr><tr><td>card</td><td>3</td><td>845.2</td></tr><tr><td>transfer</td><td>3</td><td>5230.5</td></tr></tbody></table>
+      </div>
+      <div>
+        <h2>Volume by Source System</h2>
+        <table><thead><tr><th>Source</th><th>Txn Count</th><th>Total Amount</th></tr></thead><tbody><tr><td>bill_payments</td><td>3</td><td>1525.24</td></tr><tr><td>cards</td><td>3</td><td>845.2</td></tr><tr><td>payments_transfers</td><td>3</td><td>5230.5</td></tr></tbody></table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recent Canonical Records</h2>
+      <table><thead><tr><th>Payment ID</th><th>Type</th><th>Customer</th><th>Amount</th><th>Currency</th><th>Status</th><th>Country</th></tr></thead><tbody><tr><td>BLL-3003</td><td>bill_payment</td><td>CUST-007</td><td>875.0</td><td>AED</td><td>SCHEDULED</td><td>AE</td></tr><tr><td>TRF-2004</td><td>transfer</td><td>CUST-006</td><td>780.0</td><td>EUR</td><td>COMPLETED</td><td>DE</td></tr><tr><td>TRF-2002</td><td>transfer</td><td>CUST-004</td><td>3200.5</td><td>AED</td><td>PENDING</td><td>GB</td></tr><tr><td>CRD-1003</td><td>card</td><td>CUST-003</td><td>510.0</td><td>USD</td><td>SETTLED</td><td>US</td></tr><tr><td>BLL-3002</td><td>bill_payment</td><td>CUST-003</td><td>450.25</td><td>AED</td><td>PAID</td><td>AE</td></tr><tr><td>BLL-3001</td><td>bill_payment</td><td>CUST-002</td><td>199.99</td><td>AED</td><td>PAID</td><td>AE</td></tr><tr><td>TRF-2001</td><td>transfer</td><td>CUST-001</td><td>1250.0</td><td>AED</td><td>COMPLETED</td><td>AE</td></tr><tr><td>CRD-1002</td><td>card</td><td>CUST-002</td><td>89.4</td><td>AED</td><td>DECLINED</td><td>AE</td></tr></tbody></table>
+    </section>
+  </main>
+</body>
+</html>
