@@ -2,6 +2,15 @@
 
 Compact assessment implementation for Mal's multi-product payment platform. It unifies card, transfer, and bill-payment events into a shared canonical model, validates the contract, demonstrates a `v1 -> v2` migration path, and writes queryable outputs for downstream teams.
 
+Live demo: `https://songokukhk98.github.io/MAL_product/`
+
+Data quality dashboard: `https://songokukhk98.github.io/MAL_product/data_quality_dashboard.html`
+
+Architecture visuals:
+- [Pipeline Flowchart](/Users/hiteshkaushik/MAL_product/docs/assets/pipeline-flow.svg)
+- [30/60/90 Rollout Flowchart](/Users/hiteshkaushik/MAL_product/docs/assets/rollout-flow.svg)
+- Excalidraw sources: [pipeline-flow.excalidraw](/Users/hiteshkaushik/MAL_product/docs/assets/pipeline-flow.excalidraw) and [rollout-flow.excalidraw](/Users/hiteshkaushik/MAL_product/docs/assets/rollout-flow.excalidraw)
+
 ## What is included
 
 - `data/`: mock CSV extracts from Cards, Transfers, and Bill Payments squads
@@ -44,7 +53,8 @@ After running the pipeline:
 - `outputs/payments.db`: SQLite database with `canonical_payments` table
 - `outputs/run_summary.json`: pipeline run summary
 - `outputs/data_quality_report.json`: bonus quality report
-- `docs/index.html`: optional deployed demo page for GitHub Pages
+- `docs/index.html`: deployed pipeline demo page for GitHub Pages
+- `docs/data_quality_dashboard.html`: deployed bonus data quality dashboard
 
 ## Validation rules
 
@@ -86,7 +96,11 @@ In production, this would move behind orchestration, object storage, CI contract
 
 ## Optional deployed demo
 
-This repo can be published as a static demo via GitHub Pages:
+The static demo is live on GitHub Pages:
+
+`https://songokukhk98.github.io/MAL_product/`
+
+To refresh the published demo after changing data or code:
 
 ```bash
 python3 src/pipeline.py
@@ -94,6 +108,4 @@ python3 src/data_quality.py
 python3 src/generate_demo.py
 ```
 
-Then push the repository to GitHub and enable Pages with `Deploy from a branch` using the `docs/` folder on your default branch. The live URL will be:
-
-`https://<your-github-username>.github.io/<repo-name>/`
+Then commit and push the updated `docs/index.html` to GitHub. Pages will redeploy automatically from the `docs/` folder on the `master` branch.

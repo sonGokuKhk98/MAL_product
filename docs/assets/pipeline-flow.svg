@@ -1,0 +1,62 @@
+<svg width="1400" height="860" viewBox="0 0 1400 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="860" fill="#F7F3EC"/>
+
+  <text x="72" y="78" fill="#2C52B3" font-family="Menlo, Monaco, Consolas, monospace" font-size="32" font-weight="700">Unified Payment Pipeline</text>
+  <text x="72" y="122" fill="#6A7C96" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">Cards, Transfers, and Bill Payments converge into one governed contract with migration and validation in the middle.</text>
+
+  <rect x="72" y="190" width="300" height="128" rx="28" fill="#86B2E8" stroke="#2E4F7E" stroke-width="4"/>
+  <text x="222" y="244" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="700">Cards CSV</text>
+  <text x="222" y="278" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="20" font-weight="600">merchant, MCC, RRN</text>
+
+  <rect x="72" y="392" width="300" height="128" rx="28" fill="#5E9BE6" stroke="#2E4F7E" stroke-width="4"/>
+  <text x="222" y="446" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="700">Transfers CSV</text>
+  <text x="222" y="472" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">beneficiary, IBAN,</text>
+  <text x="222" y="502" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">corridor</text>
+
+  <rect x="72" y="594" width="300" height="128" rx="28" fill="#DCE7F8" stroke="#2E4F7E" stroke-width="4"/>
+  <text x="222" y="648" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="700">Bill Pay CSV</text>
+  <text x="222" y="674" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">biller, recurring,</text>
+  <text x="222" y="704" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">debit source</text>
+
+  <rect x="520" y="330" width="420" height="232" rx="34" fill="#FFD7A6" stroke="#D35A12" stroke-width="5"/>
+  <text x="730" y="402" text-anchor="middle" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="25" font-weight="700">Squad Mapping Layer</text>
+  <text x="730" y="446" text-anchor="middle" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="600">normalize status, amount,</text>
+  <text x="730" y="482" text-anchor="middle" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="600">and timestamps into</text>
+  <text x="730" y="518" text-anchor="middle" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="600">canonical contract v1</text>
+
+  <rect x="1094" y="176" width="250" height="136" rx="28" fill="#86B2E8" stroke="#2E4F7E" stroke-width="4"/>
+  <text x="1219" y="244" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="20" font-weight="700">Contract Migration</text>
+  <text x="1219" y="282" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">v1 to v2 adds channel + country</text>
+
+  <path d="M940 416L1094 250" stroke="#D35A12" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1072 248L1094 250L1088 270" stroke="#D35A12" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <polygon points="1220,420 1360,520 1220,620 1080,520" fill="#FFF0B8" stroke="#C96B17" stroke-width="4"/>
+  <text x="1220" y="510" text-anchor="middle" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="700">Validation Gate</text>
+  <text x="1220" y="546" text-anchor="middle" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">required fields + enums</text>
+
+  <ellipse cx="1220" cy="760" rx="192" ry="86" fill="#A5EBC3" stroke="#0C8A63" stroke-width="5"/>
+  <text x="1220" y="750" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="700">Published Outputs</text>
+  <text x="1220" y="786" text-anchor="middle" fill="#3B4F6B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">JSONL, SQLite, reports</text>
+
+  <rect x="540" y="688" width="312" height="86" rx="18" fill="#FFC8CC" stroke="#D03232" stroke-width="4" stroke-dasharray="12 10"/>
+  <text x="696" y="742" text-anchor="middle" fill="#4F5567" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="700">Rejected rows to error log</text>
+
+  <path d="M372 254L520 405" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M500 402L520 405L510 386" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M372 456L520 456" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M500 446L520 456L500 466" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M372 658L520 507" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M510 526L520 507L500 511" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M1219 312L1219 420" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1209 398L1219 420L1229 398" stroke="#2E4F7E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M1220 620L1220 674" stroke="#0C8A63" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1210 652L1220 674L1230 652" stroke="#0C8A63" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M1106 548C1006 608 930 672 852 731" stroke="#D03232" stroke-width="4" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <path d="M871 732L852 731L860 714" stroke="#D03232" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

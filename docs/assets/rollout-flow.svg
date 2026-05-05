@@ -1,0 +1,46 @@
+<svg width="1400" height="860" viewBox="0 0 1400 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="860" fill="#F7F3EC"/>
+
+  <text x="72" y="78" fill="#2C52B3" font-family="Menlo, Monaco, Consolas, monospace" font-size="32" font-weight="700">30 / 60 / 90 Day Rollout</text>
+  <text x="72" y="122" fill="#6A7C96" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">The rollout uses a left-to-right timeline: start with the lowest-risk domain, prove value in Cards, then bring Transfers in last.</text>
+
+  <path d="M130 238H1270" stroke="#2E4F7E" stroke-width="5" stroke-linecap="round"/>
+
+  <circle cx="290" cy="238" r="34" fill="#FFD7A6" stroke="#D35A12" stroke-width="5"/>
+  <circle cx="700" cy="238" r="34" fill="#86B2E8" stroke="#2E4F7E" stroke-width="5"/>
+  <circle cx="1110" cy="238" r="34" fill="#A5EBC3" stroke="#0C8A63" stroke-width="5"/>
+
+  <text x="290" y="320" text-anchor="middle" fill="#2C52B3" font-family="Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="700">Days 0-30</text>
+  <text x="700" y="320" text-anchor="middle" fill="#2C52B3" font-family="Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="700">Days 31-60</text>
+  <text x="1110" y="320" text-anchor="middle" fill="#2C52B3" font-family="Menlo, Monaco, Consolas, monospace" font-size="22" font-weight="700">Days 61-90</text>
+
+  <rect x="92" y="368" width="386" height="360" rx="34" fill="#FFD7A6" stroke="#D35A12" stroke-width="4"/>
+  <text x="140" y="446" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="700">Bill Payments first</text>
+  <text x="140" y="506" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">publish canonical v1</text>
+  <text x="140" y="540" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">capture source mappings</text>
+  <text x="140" y="574" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">stand up validation harness</text>
+  <text x="140" y="608" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">run in parallel with current flow</text>
+  <text x="140" y="682" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="700">Why first:</text>
+  <text x="140" y="716" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">lower volume and simpler risk</text>
+
+  <rect x="506" y="368" width="386" height="360" rx="34" fill="#86B2E8" stroke="#2E4F7E" stroke-width="4"/>
+  <text x="554" y="446" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="700">Cards second</text>
+  <text x="554" y="506" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">introduce canonical v2</text>
+  <text x="554" y="540" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">add channel and country code</text>
+  <text x="554" y="574" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">move merchant analytics to shared table</text>
+  <text x="554" y="608" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">keep v1 backward compatible</text>
+  <text x="554" y="682" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="700">Why second:</text>
+  <text x="554" y="716" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">high visibility and reuse value</text>
+
+  <rect x="920" y="368" width="386" height="360" rx="34" fill="#A5EBC3" stroke="#0C8A63" stroke-width="4"/>
+  <text x="968" y="446" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="21" font-weight="700">Transfers last</text>
+  <text x="968" y="506" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">add the highest-control flow</text>
+  <text x="968" y="540" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">attach SLA and freshness monitoring</text>
+  <text x="968" y="574" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">retire duplicate downstream tables</text>
+  <text x="968" y="608" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">enforce contract tests for changes</text>
+  <text x="968" y="682" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="700">Why last:</text>
+  <text x="968" y="716" fill="#42526B" font-family="Menlo, Monaco, Consolas, monospace" font-size="18" font-weight="600">regulatory and beneficiary complexity</text>
+
+  <rect x="118" y="776" width="1164" height="58" rx="20" fill="#DCE7F8" stroke="#2E4F7E" stroke-width="4" stroke-dasharray="12 10"/>
+  <text x="700" y="814" text-anchor="middle" fill="#4F5567" font-family="Menlo, Monaco, Consolas, monospace" font-size="17" font-weight="700">Governance spine across all 90 days: platform owns the contract and migrations, squads own mappings, and Risk plus Finance review major data changes.</text>
+</svg>
